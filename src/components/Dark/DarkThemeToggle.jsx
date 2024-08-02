@@ -1,9 +1,8 @@
 // DarkThemeToggle.jsx
 import React from "react";
-import { useTheme } from "../../ThemeContext"; // Import useTheme hook
-
+import { useTheme } from "../../ThemeContext";
 const DarkThemeToggle = () => {
-  const { isDarkTheme, toggleTheme } = useTheme(); // Get theme state and toggle function
+  const { isDarkTheme, toggleTheme } = useTheme(); 
 
   return (
     <button onClick={toggleTheme} className="dark-theme-toggle">
