@@ -1,1 +1,1 @@
-# Devjobs-project
+# Frontend Mentor - Devjobs web app solution
