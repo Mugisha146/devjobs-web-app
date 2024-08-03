@@ -1,11 +1,11 @@
 // App.js
-import "./App.css"; // Import App.css file to apply its styles
+import "./App.css";
 import React from "react";
 import Header from "./components/Header/Header";
 import JobLists from "./components/Jobs/JobLists";
 import JobDetails from "./components/Job-details/JobDetails";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { ThemeProvider } from "./ThemeContext"; // Import ThemeProvider
+import { ThemeProvider } from "./ThemeContext"; 
 
 function App() {
   return (

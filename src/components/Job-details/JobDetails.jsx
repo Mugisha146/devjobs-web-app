@@ -1,14 +1,41 @@
-import React from "react";
-
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import jobs from "../../data/data";
-
 import { Link } from "react-router-dom";
 
 const JobDetails = () => {
-  const { position } = useParams();
+  const { jobId } = useParams();
+  const [jobDetails, setJobDetails] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const job = jobs.find((job) => job.position === position);
+  useEffect(() => {
+    const fetchJobDetails = async () => {
+      try {
+        const response = await fetch(`/api/jobs/${jobId}`);
+        const data = await response.json();
+        setJobDetails(data);
+      } catch (err) {
+        setError(err);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchJobDetails();
+  }, [jobId]);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error loading job details.</div>;
+  }
+
+  if (!jobDetails) {
+    return <div>No job details available.</div>;
+  }
+  const job = jobDetails;
 
   return (
     <section>

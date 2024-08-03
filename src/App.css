@@ -10,6 +10,28 @@ body {
   font-family: "Fredoka", sans-serif;
 }
 
+body, section,.search__panel-01 , .job__list__wrapper, .details__wrapper {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.light, section.light,.search__panel-01.light  .job__list__wrapper.light, .details__wrapper.light {
+  background-color: white;
+  color: black;
+}
+
+body.dark, section.dark,.search__panel-01.dark, .job__list__wrapper.dark, .details__wrapper.dark {
+  background-color: black;
+  color: white;
+}
+
+.dark-theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+}
+
 h1,
 h2 {
   font-size: 1.3rem;
@@ -292,49 +314,3 @@ p {
 }
 
 
-.dark-theme-toggle {
-  body{
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-left: 10px;
-}}
-
-.dark-theme-toggle:hover {
-  background-color: #555;
-}
-
-
-
-
-
-
-
-/*.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-*/
