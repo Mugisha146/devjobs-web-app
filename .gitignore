@@ -6,7 +6,25 @@
 # Build outputs
 /dist
 /frontend/build
+/backend/build# Node.js dependencies
+/node_modules
+/frontend/node_modules
+/backend/node_modules
+
+# Build outputs
+/dist
+/frontend/build
 /backend/build
+
+# Environment files
+/frontend/.env
+/backend/.env
+
+# Package lock files
+package-lock.json
+/frontend/package-lock.json
+/backend/package-lock.json
+
 
 # Environment files
 /frontend/.env
